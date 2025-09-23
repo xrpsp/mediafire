@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Files</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f4f7fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .drive-logo {
+      margin: 40px 0 25px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .drive-logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #0001;
+      background: #fff;
+      padding: 9px;
+      transition: transform 0.3s;
+    }
+    .drive-logo img:hover {
+      transform: scale(1.10) rotate(-4deg);
+      box-shadow: 0 7px 26px #2f80ed22;
+    }
+    .files-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      .files-grid {
+        grid-template-columns: 1fr;
+        max-width: 90vw;
+      }
+    }
+    .file-card {
+      background: linear-gradient(120deg, #e3edf7 72%, #fff 100%);
+      border-radius: 19px 19px 11px 11px;
+      box-shadow: 0 5px 30px #2f80ed17, 0 1.5px 7px #2f80ed09;
+      padding: 28px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: box-shadow 0.3s, transform 0.16s;
+      position: relative;
+      overflow: hidden;
+      border: 2.5px solid #e9ecf3;
+    }
+    .file-card:hover {
+      box-shadow: 0 12px 42px #2f80ed30, 0 1.5px 7px #2f80ed11;
+      transform: translateY(-8px) scale(1.03);
+      border-color: #b3d4fc;
+    }
+    .file-icon {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #5e92f3 70%, #a9d8ff 100%);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 14px #2f80ed18;
+      position: relative;
+    }
+    .file-icon::after {
+      content: "";
+      position: absolute;
+      top: 10px; right: 8px;
+      width: 15px; height: 15px;
+      background: #fff8;
+      border-radius: 4px;
+      transform: rotate(-18deg);
+      box-shadow: 0 0 0 1.5px #d3e6fd;
+    }
+    .file-zip {
+      font-size: 2.1em;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-weight: bold;
+      text-shadow: 0 2px 6px #448fff55;
+    }
+    .file-title {
+      font-weight: 700;
+      font-size: 1.12em;
+      margin-bottom: 6px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      color: #22599e;
+    }
+    .file-desc {
+      font-size: 0.99em;
+      color: #568;
+      margin-bottom: 10px;
+      text-align: center;
+      opacity: 0.84;
+    }
+    .file-link {
+      display: inline-block;
+      margin-top: 8px;
+      background: linear-gradient(90deg, #2f80ed, #56ccf2 96%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 26px;
+      font-weight: 700;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 10px #2f80ed19;
+      transition: background 0.22s, transform 0.18s;
+      outline: none;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+    .file-link:hover {
+      background: linear-gradient(90deg, #56ccf2 15%, #2f80ed 80%);
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+<body>
+  <div class="drive-logo">
+    <img src="https://i.postimg.cc/0jSfTrMV/Google-Drive-icon-2020-svg.png" alt="Google Drive">
+  </div>
+  <div class="files-grid">
+    <div class="file-card">
+      <div class="file-icon"><span class="file-zip">📦</span></div>
+      <div class="file-title">PSP.zip <span style="color:#999;font-size:0.87em;">(16iso)</span></div>
+      <div class="file-desc">A compressed file containing 16 PSP games</div>
+      <a class="file-link" href="https://drive.google.com/file/d/1-4Ri9qGncJxrkHQiQsjflfrxwiB7R9SM/view?usp=drivesdk" target="_blank">Open File</a>
+    </div>
+    <div class="file-card">
+      <div class="file-icon"><span class="file-zip">📦</span></div>
+      <div class="file-title">PSP2.zip <span style="color:#999;font-size:0.87em;">(9iso)</span></div>
+      <div class="file-desc">A compressed file with 9 additional PSP games</div>
+      <a class="file-link" href="https://drive.google.com/file/d/1-4IdqvvY9tuWYCui6HTqvpI6Q7R-zpe5/view?usp=drivesdk" target="_blank">Open File</a>
+    </div>
+    <div class="file-card">
+      <div class="file-icon"><span class="file-zip">📁</span></div>
+      <div class="file-title">GAMES.zip <span style="color:#999;font-size:0.87em;">(12game)</span></div>
+      <div class="file-desc">A selected collection of 12 featured games</div>
+      <a class="file-link" href="https://drive.google.com/file/d/1-C0TN_J-HjvrLK7NspsiV8HXS9Bhja4M/view?usp=drivesdk" target="_blank">Open File</a>
+    </div>
+    <div class="file-card">
+      <div class="file-icon"><span class="file-zip">📁</span></div>
+      <div class="file-title">GAMES2.zip <span style="color:#999;font-size:0.87em;">(12game)</span></div>
+      <div class="file-desc">12 more games in a compressed file</div>
+      <a class="file-link" href="https://drive.google.com/file/d/1-C5RyJbOdSMcdnyzQAVUSBO_tx-All1d/view?usp=drivesdk" target="_blank">Open File</a>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.file-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // إذا كان الضغط على رابط <a> فلا تفعل شيء
+        if (e.target.tagName.toLowerCase() === 'a') return;
+        var link = card.querySelector('.file-link');
+        if (link) window.open(link.href, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
