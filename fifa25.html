@@ -1,108 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FC 25 Mobile Download</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0e0e0e;
-    color: #fff;
-  }
-  header {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background: url('https://i.postimg.cc/qgfzZgPk/fc-25-fan-made-cover-v0-eyhh611jjcad1.jpg') center/cover no-repeat;
-  }
-  header img {
-    position: absolute;
-    bottom: -50px;
-    left: 20px;
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
-    border: 4px solid #fff;
-    object-fit: cover;
-    background: #fff;
-  }
-  .container {
-    max-width: 1000px;
-    margin: 80px auto 40px auto;
-    padding: 0 20px;
-  }
-  h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #00ffae;
-  }
-  .download-btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: linear-gradient(45deg,#00ffae,#00b8ff);
-    color: #000;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  .download-btn:hover {
-    opacity: 0.8;
-  }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 15px;
-    margin: 30px 0;
-  }
-  .gallery img {
-    width: 100%;
-    border-radius: 14px;
-  }
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-top: 30px;
-  }
-  .video-container iframe {
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    border:0;
-    border-radius: 14px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC 25 - Download Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Oxanium', sans-serif;}
+    html {scroll-behavior:smooth;}
+    body {background:#0c0c0c;color:#fff;overflow-x:hidden;}
+    header {
+      position:relative;
+      height:100vh;
+      background:url('https://i.postimg.cc/qgfzZgPk/fc-25-fan-made-cover-v0-eyhh611jjcad1.jpg') no-repeat center/cover;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;
+    }
+    header::after{
+      content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.5);
+    }
+    header img{
+      position:relative;z-index:2;width:150px;
+      border-radius:50%;
+      border:3px solid #fff;
+      animation:float 3s infinite ease-in-out;
+    }
+    header h1{
+      position:relative;z-index:2;
+      font-size:3.5rem;margin-top:20px;letter-spacing:3px;
+      color:#ffffff;
+      text-shadow:2px 2px 8px rgba(0,0,0,0.9);
+    }
+    .download-btn {
+      position:relative;z-index:2;margin-top:25px;
+      background:linear-gradient(135deg,#2ecc71,#27ae60);
+      padding:15px 30px;border-radius:12px;
+      color:#fff;font-weight:bold;text-decoration:none;
+      transition:0.3s;display:inline-block;
+    }
+    .download-btn:hover {
+      transform:translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.6);
+    }
+    @keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-15px);}100%{transform:translateY(0);}}
+
+    section{padding:80px 20px;max-width:1100px;margin:auto;}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+    .gallery img{width:100%;border-radius:15px;transition:transform 0.4s, box-shadow 0.4s;}
+    .gallery img:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.6);}
+
+    .video-container{position:relative;width:100%;max-width:900px;margin:auto;overflow:hidden;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.7);}
+    .video-container iframe{width:100%;height:500px;border-radius:20px;display:block;}
+
+    .downloads{margin-top:60px;text-align:center;}
+    .downloads h2{font-size:2rem;margin-bottom:20px;}
+    .btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;}
+    .btns a{
+      background:linear-gradient(135deg,#2ecc71,#27ae60);
+      padding:15px 20px;
+      color:#fff;text-decoration:none;font-weight:bold;
+      border-radius:12px;transition:0.3s;
+      display:inline-block;
+    }
+    .btns a:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.6);}
+    footer{padding:30px;text-align:center;background:#111;font-size:0.9rem;opacity:0.8;}
+  </style>
 </head>
 <body>
+  <header>
+    <img src="https://i.postimg.cc/Y9s4Yd8L/1725317740-918-P1jut-Ef-L-AC-SL1500.jpg" alt="FC 25 Logo">
+    <h1>FC 25</h1>
+    <a href="#download-section" class="download-btn">Download Now</a>
+  </header>
 
-<header>
-  <img src="https://i.postimg.cc/Y9s4Yd8L/1725317740-918-P1jut-Ef-L-AC-SL1500.jpg" alt="FC 25 Logo">
-</header>
+  <section>
+    <h2 style="text-align:center;font-size:2rem;margin-bottom:30px;">Game Preview</h2>
+    <div class="gallery">
+      <img src="https://i.postimg.cc/g04LkzZD/Nr6-Ct-BKUWBv-W9-T6e-KJbgpn.jpg" alt="Screenshot 1">
+      <img src="https://i.postimg.cc/K8PgwrcC/EA-FC-25-passing.jpg" alt="Screenshot 2">
+      <img src="https://i.postimg.cc/NGnTHjPC/rb-leipzig-fc-25.jpg" alt="Screenshot 3">
+    </div>
+  </section>
 
-<div class="container">
-  <h1>FC 25 Mobile</h1>
-  <p>Experience the next generation of football gaming with FC 25 Mobile. Enjoy realistic gameplay, updated teams, and cutting-edge graphics right on your device.</p>
+  <section>
+    <h2 style="text-align:center;font-size:2rem;margin-bottom:30px;">Gameplay Trailer</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/pBM2xyco_Kg?autoplay=1&mute=1&loop=1&playlist=pBM2xyco_Kg" 
+        title="FC 25 Trailer" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-  <a class="download-btn" href="#">Download Now</a>
+  <section id="download-section" class="downloads">
+    <h2><b>DOWNLOAD LINKS</b></h2>
+    <div class="btns">
+      <a href="https://installchecker.com/cl/v/7j7n9v" target="_blank">Download Android APK - Link 1</a>
+      <a href="https://mediafire.store/locked.html" target="_blank">Download Android APK - Link 2</a>
+      <a href="https://installchecker.com/cl/v/7j7n9v" target="_blank">Download iPhone iPad iOS - Link 1</a>
+      <a href="https://mediafire.store/locked.html" target="_blank">Download iPhone iPad iOS - Link 2</a>
+    </div>
+  </section>
 
-  <h2 style="margin-top:40px;">Screenshots</h2>
-  <div class="gallery">
-    <img src="https://i.postimg.cc/g04LkzZD/Nr6-Ct-BKUWBv-W9-T6e-KJbgpn.jpg" alt="Screenshot 1">
-    <img src="https://i.postimg.cc/K8PgwrcC/EA-FC-25-passing.jpg" alt="Screenshot 2">
-    <img src="https://i.postimg.cc/NGnTHjPC/rb-leipzig-fc-25.jpg" alt="Screenshot 3">
-  </div>
-
-  <h2>Trailer</h2>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/pBM2xyco_Kg" allowfullscreen></iframe>
-  </div>
-</div>
-
+  <footer>
+    © 2025 FC 25. All rights reserved.
+  </footer>
 </body>
 </html>
