@@ -1,430 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mobile Game Downloads | Latest Android & iOS Games</title>
-  <meta name="description" content="Download the latest and best mobile games for Android and iOS. Safe, fast, and free downloads for popular titles.">
-  <meta name="keywords" content="mobile games, android games, mediafire, mediafire games, mediafire apps, MediaFire.ma, mediafire game, mediafire.com, direct link, mixgx gta 5 mobile, modxnet, modxnet.com, findsmodapk, apksneak, mixgx, trendgame2025, baseball 9 mod, mobilegame24,  ios games, download games, mod apk, mod ios, gta 5 mobile, gta v mobile, once human mobile, persona 5 the phantom x, beamng drive mobile, fortnite mobile, free games, game downloads, latest games, trending games">
-  <meta name="robots" content="index, follow">
-  <link rel="icon" href="https://i.postimg.cc/PJ4LmWt3/unnamed.webp" type="image/webp">
-  <!-- Cyborg Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cyborg+One&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --main-bg: #111;
-      --card-bg: #181818;
-      --accent: #00ffe7;
-      --radius: 18px;
-      --transition: 0.3s cubic-bezier(.47,1.64,.41,.8);
-      --shadow: 0 4px 24px 0 #00ffe733;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--main-bg);
-      color: #fff;
-      font-family: 'Share Tech Mono', monospace;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      width: 100%;
-      padding: 32px 0 0 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: transparent;
-      animation: fadeInDown 1s ease;
-    }
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-40px);}
-      100% { opacity: 1; transform: translateY(0);}
-    }
-    .logo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: #191919;
-      box-shadow: 0 0 32px #00ffe7aa;
-      object-fit: cover;
-      animation: glow 2s infinite alternate;
-    }
-    @keyframes glow {
-      0% { box-shadow: 0 0 32px #00ffe7aa;}
-      100% { box-shadow: 0 0 64px #00ffe7ee;}
-    }
-    h1 {
-      font-family: 'Cyborg One', sans-serif;
-      margin: 24px 0 8px 0;
-      font-size: 2.2rem;
-      letter-spacing: 2px;
-      color: var(--accent);
-      text-align: center;
-      text-shadow: 0 2px 18px #00ffe7aa;
-      animation: fadeIn 1.4s 0.2s both;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0;}
-      100% { opacity: 1;}
-    }
-    h2 {
-      font-size: 1.25rem;
-      color: #b2f7ef;
-      font-weight: 400;
-      text-align: center;
-      margin-bottom: 38px;
-      font-family: 'Share Tech Mono', monospace;
-      opacity: .85;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>XRPSP Mobile Games 2025</title>
 
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 32px;
-    }
-    .games-grid {
-      display: grid;
-      gap: 24px;
-      width: 95vw;
-      max-width: 1200px;
-      justify-content: center;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      animation: fadeInUp 1.2s;
-    }
-    @media (min-width: 768px) {
-      .games-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-    }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(60px);}
-      100% { opacity: 1; transform: translateY(0);}
-    }
-    .game-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px 16px 18px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform var(--transition), box-shadow var(--transition);
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      min-width: 0;
-      will-change: transform;
-      animation: popIn 0.7s;
-    }
-    @keyframes popIn {
-      0% { opacity: 0; transform: scale(.7);}
-      100% { opacity: 1; transform: scale(1);}
-    }
-    .game-card:hover {
-      transform: translateY(-8px) scale(1.07) rotate(-.5deg);
-      box-shadow: 0 10px 48px 6px #00ffe7bb;
-      z-index: 2;
-    }
-    .game-img {
-      width: 100%;
-      max-width: 160px;
-      aspect-ratio: 1/1;
-      border-radius: 18px;
-      object-fit: cover;
-      box-shadow: 0 2px 16px #00ffe744;
-      margin-bottom: 16px;
-      border: 3px solid #191919;
-      transition: box-shadow .3s;
-      background: #1d1d1d;
-    }
-    .game-card:hover .game-img {
-      box-shadow: 0 0 36px #00ffe7cc, 0 6px 24px #00ffe755;
-    }
-    .game-title {
-      font-family: 'Cyborg One', sans-serif;
-      font-size: 1.1rem;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 12px;
-      letter-spacing: 1.5px;
-      min-height: 42px;
-      text-shadow: 0 2px 8px #00ffe7aa;
-      transition: color .3s;
-    }
-    .game-card:hover .game-title {
-      color: var(--accent);
-    }
+<!-- Meta Keywords للبحث -->
+<meta name="keywords" content="Roblox, Fortnite, Minecraft, Call of Duty, Free Fire, Clash of Clans, Clash Royale, PUBG Mobile, Among Us, Subway Surfers, Candy Crush Saga, Brawl Stars, Mobile Legends, Genshin Impact, League of Legends, Apex Legends, FIFA 25, NBA 2K25, Valorant, GTA V, Elden Ring, Assassin's Creed, Horizon Forbidden West, God of War Ragnarok, Street Fighter 6, Forza Horizon 5, Doom Eternal, Metal Gear Solid, Star Wars Jedi Survivor, Baldur's Gate 3, Steam, Epic Games, Origin, Battle.net, Uplay, Twitch, YouTube Gaming, Kick, Facebook Gaming, Trovo, Discord, TikTok, Instagram, Threads, Twitter, Facebook, Snapchat, LinkedIn, V-Bucks, Robux, Gems, Coins, Gold, Silver, Credits, Platinum, Mana, Simoleons, Zenny, Loot Boxes, Loot Crates, Battle Pass, BlueStacks, NoxPlayer, LDPlayer, MEmu Play, Gameloop, Citra, Dolphin Emulator, PPSSPP, RetroArch, Winlator, MediaFire, Mega, Softonic, FileHippo, CNET Download, APKPure, APKMirror, APKCombo, Android, iOS, PlayStation, Xbox, Nintendo Switch, Steam Deck, Epic Store, Humble Bundle, GOG, Itch.io, Valorant Points, Event Tokens, Hextech Crafting, Champion Shards, Event Passes, Minecraft Coins, Fortnite Skins, Mobile Legends Diamonds, Clash Royale Gems, Free Fire Diamonds, Roblox Premium, Fortnite Battle Pass, mobile games, GTA V Mobile, Forza Horizon 5 Mobile, Fortnite Mobile, PSP Roms, PS4 Emulator, Android Games, download games, install mobile games">
+<meta name="description" content="Download and install the best mobile games in 2025: GTA V Mobile, Forza Horizon 5 Mobile, Fortnite Mobile, and many more. Explore PSP Roms and PS4 emulators, mixgx gta 5 mobile, xrpsp com, xrpsp, xrpsp mobile games, xrpsp gta 5 mobile, trendgame2025, mobilegame24, modxnet, modxnet.com, jawahir free fire.">
 
-    /* Download Button */
-    .download-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 90%;
-      margin-top: auto;
-      background: linear-gradient(90deg, #232526 0%, #1c92d2 100%);
-      color: #fff;
-      padding: 7px 0;
-      border-radius: 30px;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      box-shadow: 0 2px 16px #0006;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      transition: background .23s, color .23s, transform .18s, box-shadow .19s;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      gap: 5px;
-      font-size: 0.93rem;
-      text-decoration: none !important;
-    }
-    .download-btn:active {
-      transform: scale(.97);
-    }
-    .download-btn:hover {
-      background: linear-gradient(90deg, #1c92d2 0%, #f2fcfe 100%);
-      color: #232526;
-      box-shadow: 0 0 24px #1c92d2bb;
-      text-decoration: none !important;
-    }
-    .download-btn .download-text {
-      font-family: 'Cyborg One', sans-serif;
-      font-size: 0.95em;
-      margin: 0 2px;
-      letter-spacing: 1.1px;
-      color: inherit;
-      display: flex;
-      align-items: center;
-      text-decoration: none !important;
-    }
-    .download-btn .icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s;
-    }
-    .download-btn .icon-android {
-      color: #3ddc84;
-    }
-    .download-btn .icon-apple {
-      color: #fff;
-      filter: drop-shadow(0 0 2px #000b);
-    }
-    .download-btn:hover .icon-android {
-      transform: scale(1.08) rotate(-4deg);
-      color: #0f0;
-    }
-    .download-btn:hover .icon-apple {
-      transform: scale(1.08) rotate(4deg);
-      color: #111;
-    }
-    .download-btn:visited,
-    .download-btn:focus {
-      text-decoration: none !important;
-      outline: none;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-    footer {
-      width: 100%;
-      padding: 28px 0 16px 0;
-      background: #181818;
-      border-top: 2px solid #00ffe733;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 1rem;
-      color: #b2f7ef;
-      font-family: 'Share Tech Mono', monospace;
-      opacity: 0.93;
-      letter-spacing: .5px;
-      animation: fadeInUp 1.2s 0.2s both;
-    }
-    .footer-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      margin-bottom: 12px;
-      box-shadow: 0 0 16px #00ffe7aa;
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar { width: 10px;}
-    ::-webkit-scrollbar-thumb { background: #00ffe744; border-radius: 8px; }
-    ::-webkit-scrollbar-track { background: #222; }
-    /* Responsive font for mobile */
-    @media (max-width: 600px) {
-      h1 { font-size: 1.35rem;}
-      h2 { font-size: 1rem;}
-      .games-grid { gap: 16px;}
-      .game-card { padding: 12px 8px; }
-      .game-img { max-width: 100px;}
-      .footer-logo { width: 36px; height: 36px;}
-      .download-btn { font-size: 0.89rem; }
-      .download-btn .download-text { font-size: 0.89em;}
-    }
-  </style>
+<!-- Favicon -->
+<link rel="icon" href="https://i.postimg.cc/hGzjpfpS/file-00000000d85462439f89678ea100d482.png" type="image/png">
+
+<!-- Structured Data for Logo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "XRPSP Mobile Games",
+  "url": "https://yourwebsite.com",
+  "logo": "https://i.postimg.cc/hGzjpfpS/file-00000000d85462439f89678ea100d482.png"
+}
+</script>
+
+<style>
+body {
+    margin: 0;
+    background: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    background: #141414;
+}
+header img {
+    height: 40px;
+    margin-right: 15px;
+}
+.center-logo {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+.center-logo img {
+    height: 80px;
+}
+.search-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+.search-box input {
+    width: 90%;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 0 20px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.game {
+    background: #1b1b1b;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform .2s;
+}
+.game:hover {transform: scale(1.05);}
+.game img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.game h3 {
+    font-size: 15px;
+    margin: 10px 5px;
+    min-height: 40px;
+}
+.game a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 15px;
+    padding: 8px 14px;
+    background: #ff007f;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background .2s;
+}
+.game a svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+}
+.game a:hover {background: #ff3399;}
+</style>
 </head>
 <body>
-  <header>
-    <img src="https://i.postimg.cc/PJ4LmWt3/unnamed.webp" alt="Site Logo" class="logo" width="110" height="110">
-    <h1>Mediafire Store</h1>
-    <h2>Latest Android & iOS games • Fast & Safe Download • Free Forever</h2>
-  </header>
-  <main>
-    <section class="games-grid" aria-label="Mobile Games List">
-      <!-- Game 1 -->
-      <div class="game-card" data-aos="fade-up">
-        <img src="https://i.postimg.cc/BQgGTh2c/IMG-20250906-230641.jpg" alt="Once Human" class="game-img" loading="lazy">
-        <div class="game-title">Once Human</div>
-        <a href="oncehuman.html" class="download-btn" aria-label="Download Once Human">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
+
+<header>
+    <img src="https://i.postimg.cc/hGzjpfpS/file-00000000d85462439f89678ea100d482.png" alt="XRPSP Logo">
+</header>
+
+<div class="center-logo">
+    <img src="https://i.postimg.cc/hGzjpfpS/file-00000000d85462439f89678ea100d482.png" alt="XRPSP Logo Center">
+</div>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search games...">
+</div>
+
+<section class="games" id="gamesList">
+</section>
+
+<script>
+const games=[
+ {name:"Forza Horizon 5 Mobile",img:"https://i.postimg.cc/0jqcQ8GL/IMG-20250921-230644.jpg",link:"https://mediafire.store/forzahorizon5.html"},
+ {name:"GTA V Mobile",img:"https://i.postimg.cc/8zXQ3jK7/06219f680deea246d8dc88a2b8f2c3ab.jpg",link:"https://mediafire.store/gtavmobile.html"},
+ {name:"BeamNG Drive Mobile",img:"https://i.postimg.cc/mrCdGzCQ/images.png",link:"https://mediafire.store/beamngdrivemobile.html"},
+ {name:"Once Human Mobile",img:"https://i.postimg.cc/BQgGTh2c/IMG-20250906-230641.jpg",link:"https://mediafire.store/oncehuman.html"},
+ {name:"Fortnite Mobile",img:"https://i.postimg.cc/NG8htNCq/Fortnite-F-lettermark-logo.png",link:"https://mediafire.store/fortnitemobile.html"},
+ {name:"Rematch Mobile",img:"https://i.postimg.cc/bJ0F1Dvz/8b8d6e909b914126aff50bf032f0f83f-l.png",link:"https://mediafire.store/rematchmobile.html"},
+ {name:"Persona 5 The Phantom X",img:"https://i.postimg.cc/yNwq12zB/unnamed.png",link:"https://mediafire.store/persona5thephantomx.html"},
+ {name:"PS4 Emulator Pro",img:"https://i.postimg.cc/L53K4QP3/ffe18bc07f4987eed129481171683dad.jpg",link:"https://lockedapp.net/cl/i/34o8nm"},
+ {name:"PSP Roms",img:"https://i.postimg.cc/XvRTf6cg/Xp-Bm-Fy4-Fn4.png",link:"https://mediafire.store/psproms.html"},
+ {name:"Winlator",img:"https://i.postimg.cc/sfYRJxLG/8b407b57d02a2e41c7ba54441391d9ce.png",link:"https://lockedapp.net/cl/i/o4x15q"},
+
+ {name:"Red Dead Redemption 2 Mobile",img:"https://i.postimg.cc/SKMPNtFY/thumb-1920-140579.png",link:"https://mediafire.store/rdr2.html"},
+ {name:"Inside Mobile",img:"https://i.postimg.cc/VN9Q9Bmh/playdead-inside-logo.png",link:"https://mediafire.store/insidemobile.html"},
+ {name:"FIFA 25",img:"https://i.postimg.cc/1Rqz1yjy/1725317740-918-P1jut-Ef-L-AC-SL1500.jpg",link:"https://mediafire.store/fifa25.html"},
+ {name:"CarX Drift Racing 2",img:"https://i.postimg.cc/yYGngXTm/unnamed.png",link:"https://mediafire.store/carxdriftracing.html"},
+ {name:"Assetto Corsa Mobile",img:"https://i.postimg.cc/x1RCpgFH/images.jpg",link:"https://mediafire.store/assettocorsamobile.html"},
+ {name:"Euro Truck",img:"https://i.postimg.cc/Qxm08ZFy/IMG-20250921-230613.jpg",link:"https://mediafire.store/eurotruck.html"},
+ {name:"Watch Dogs 2",img:"https://i.postimg.cc/rFRxb6S4/wd25-e1479104909488.jpg",link:"https://mediafire.store/watchdogs2.html"},
+ {name:"GTA Vice City",img:"https://i.postimg.cc/c1wYRvnn/gta-vice-city-logo-by-tokrius-dc9pe8i-fullview.jpg",link:"https://mediafire.store/gtavicecity.html"},
+ {name:"MedOut 2",img:"https://i.postimg.cc/J0DD9JB8/cdc262897fa9071d9e00cff1344ca6f538cb6f7ed62e66cfe9a80c709e2f1870-200.jpg",link:"https://mediafire.store/medout2.html"},
+ {name:"GTA San Andreas",img:"https://i.postimg.cc/J0cKH9Pt/unnamed-1.png",link:"https://mediafire.store/gtasanandreas.html"},
+ {name:"The Last of Us 2 Mobile",img:"https://i.postimg.cc/c4m7fdZM/the-last-of-us-part-2-9gkk.jpg",link:"https://mediafire.store/thelastofus2mobile.html"},
+ {name:"The Crew Motorfest",img:"https://i.postimg.cc/gjN8Wdgy/full-8964009-America-Frontccc.jpg",link:"https://mediafire.store/thecrewmotorfest.html"},
+ {name:"Ride 5 Mobile",img:"https://i.postimg.cc/wxGjS7Vf/Fve-Jk-Qpn-HYGnos7y-Qj-S3f-V7k3-HMy.png",link:"https://mediafire.store/ride5mobile.html"},
+ {name:"Spider-Man Mobile",img:"https://i.postimg.cc/mDrTnsFW/spider-man-for-android-b05897513d72940360d5492f5ac16abe.jpg",link:"https://mediafire.store/spidermanmobile.html"},
+ {name:"Hollow Knight Silksong",img:"https://i.postimg.cc/pdsHz6cG/Silksong-cover.jpg",link:"https://mediafire.store/hollowknightsilksong.html"},
+ {name:"Jet Set Radio",img:"https://i.postimg.cc/qqT9nnR5/JSR-digital-release.jpg",link:"https://mediafire.store/jetsetradio.html"},
+ {name:"Baseball 9 MOD",img:"https://i.postimg.cc/85hY15HB/baseball.png",link:"https://mediafire.store/baseball9mod.html"},
+ {name:"Basketball 2k25 MyTEAM",img:"https://i.postimg.cc/cCh5nbPv/679842fb5d226-com-t2ksports-myteam2k25.png",link:"https://mediafire.store/basketball2k25myteam.html"},
+ {name:"Top Games Currency",img:"https://i.postimg.cc/3N6kFfSh/68589a98-fd21-41e4-8703-49a1bfdadd46-shutterstock-2072826806.jpg",link:"https://www.aiappls.com"}
+];
+
+const container=document.getElementById("gamesList");
+function render(list){
+    container.innerHTML=list.map(g=>`
+      <div class="game">
+        <img src="${g.img}" alt="${g.name}">
+        <h3>${g.name}</h3>
+        <a href="${g.link}" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 16l-6-6h4V4h4v6h4l-6 6zM5 20h14v-2H5v2z"/>
+          </svg>
+          Install
         </a>
-      </div>
-      <!-- Game 2 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.1s;">
-        <img src="https://i.postimg.cc/8zXQ3jK7/06219f680deea246d8dc88a2b8f2c3ab.jpg" alt="GTA V Mobile" class="game-img" loading="lazy">
-        <div class="game-title">GTA V Mobile</div>
-        <a href="gtavmobile.html" class="download-btn" aria-label="Download GTA V Mobile">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-      <!-- Game 3 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.2s;">
-        <img src="https://i.postimg.cc/yNwq12zB/unnamed.png" alt="Persona 5 The Phantom X" class="game-img" loading="lazy">
-        <div class="game-title">Persona 5 The Phantom X</div>
-        <a href="persona5thephantomx.html" class="download-btn" aria-label="Download Persona 5 The Phantom X">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-      <!-- Game 4 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.3s;">
-        <img src="https://i.postimg.cc/qqT9nnR5/JSR-digital-release.jpg" alt="Jet Set Radio" class="game-img" loading="lazy">
-        <div class="game-title">Jet Set Radio</div>
-        <a href="jetsetradio.html" class="download-btn" aria-label="Download Jet Set Radio">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-      <!-- Game 5 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.4s;">
-        <img src="https://i.postimg.cc/hv1N0jQP/6404024.png" alt="BeamNG Drive Mobile" class="game-img" loading="lazy">
-        <div class="game-title">BeamNG Drive Mobile</div>
-        <a href="beamngdrivemobile.html" class="download-btn" aria-label="Download BeamNG Drive Mobile">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-      <!-- Game 6 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.5s;">
-        <img src="https://i.postimg.cc/NG8htNCq/Fortnite-F-lettermark-logo.png" alt="Fortnite Mobile" class="game-img" loading="lazy">
-        <div class="game-title">Fortnite Mobile</div>
-        <a href="fortnitemobile.html" class="download-btn" aria-label="Download Fortnite Mobile">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-      <!-- Game 7 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.6s;">
-        <img src="https://i.postimg.cc/85hY15HB/baseball.png" alt="Baseball 9 MOD" class="game-img" loading="lazy">
-        <div class="game-title">Baseball 9 MOD</div>
-        <a href="baseball9mod.html" class="download-btn" aria-label="Download Baseball 9 MOD">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-      <!-- Game 8 -->
-      <div class="game-card" data-aos="fade-up" style="animation-delay:0.7s;">
-        <img src="https://i.postimg.cc/cCh5nbPv/679842fb5d226-com-t2ksports-myteam2k25.png" alt="Basketball 2k25 MyTEAM" class="game-img" loading="lazy">
-        <div class="game-title">Basketball 2k25 MyTEAM</div>
-        <a href="nba2k25myteam.html" class="download-btn" aria-label="Download Basketball 2k25 MyTEAM">
-          <span class="icon icon-android">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.25-2.16a.5.5 0 1 0-.86-.5l-1.28 2.21A7.09 7.09 0 0 0 12 8.5c-1.62 0-3.13.54-4.71 1.07L6 6.82a.5.5 0 1 0-.86.5l1.25 2.16C3.28 10.1 1.5 12.6 1.5 15.5c0 2.38 2.11 4.5 4.5 4.5.7 0 1.38-.17 2-.47V20a1 1 0 0 0 2 0v-1.47A4.48 4.48 0 0 0 18 20c2.5 0 4.5-2.12 4.5-4.5 0-2.9-1.78-5.4-4.9-6.02zM6.92 17.15A2.5 2.5 0 1 1 4.5 15.5c0 .95.74 1.74 1.42 2.04zm10.16 0A2.5 2.5 0 1 1 19.5 15.5c0 .95-.74 1.74-1.42 2.04z"/></svg>
-          </span>
-          <span class="icon icon-apple">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16.63 13.44c-.02-2.22 1.82-3.29 1.89-3.33-1.03-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.66.79-3.35.79-.7 0-1.78-.77-2.93-.75-1.51.02-2.91.88-3.68 2.23-1.56 2.7-.4 6.72 1.12 8.93.75 1.09 1.65 2.3 2.83 2.26 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.94.71 1.22-.02 1.99-1.11 2.74-2.2.87-1.29 1.24-2.54 1.25-2.6-.03-.01-2.41-.93-2.43-3.7zm-2.16-6.77c.62-.75 1.04-1.8.92-2.85-.89.04-1.96.6-2.6 1.35-.57.66-1.08 1.72-.89 2.73.94.07 1.94-.48 2.57-1.23z"/></svg>
-          </span>
-          <span class="download-text">Download</span>
-        </a>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <img src="https://i.postimg.cc/PJ4LmWt3/unnamed.webp" alt="Footer Logo" class="footer-logo">
-    <div>
-      &copy; 2006 Mediafire© &mdash; All rights reserved.<br>
-      Designed with <span style="color:var(--accent)">♥</span> for gamers.
-    </div>
-  </footer>
-  <script>
-    // Simple animation on scroll for cards (AOS effect)
-    function animateOnScroll() {
-      const cards = document.querySelectorAll('.game-card');
-      const trigger = window.innerHeight * 0.9;
-      cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if(rect.top < trigger) {
-          card.style.opacity = '1';
-          card.style.transform = 'none';
-        }
-      });
-    }
-    document.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.game-card').forEach((card, idx) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(80px)';
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'none';
-        }, 400 + idx * 120);
-      });
-    });
-  </script>
+      </div>`).join('');
+}
+render(games);
+
+document.getElementById("searchInput").addEventListener("keyup", e => {
+    const val = e.target.value.toLowerCase();
+    const filtered = games.filter(g => g.name.toLowerCase().includes(val));
+    render(filtered);
+});
+</script>
+
 </body>
 </html>
